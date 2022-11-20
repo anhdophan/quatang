@@ -1,0 +1,147 @@
+<html __fvdsurfcanyoninserted="1"
+      class="
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+    ">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 0. Phần icon của website (thay đổi link đến icon nếu bạn muốn sửa nó) -->
+    <link rel="shortcut icon" type="image/png" href="./birthdayCake.png" />
+
+    <!-- 1. Đây là phần title của website -->
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <script>
+        window.open = function () { };
+        window.print = function () { };
+        // Support hover state for mobile.
+        if (false) {
+            window.ontouchstart = function () { };
+        }
+    </script>
+    <script type="text/javascript"
+            src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script>
+    <meta content="clickberry-extension-here" />
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Wendy+One"
+          rel="stylesheet"
+          type="text/css" />
+    
+    <div class="container">
+        <!-- 2. Dòng chữ Happy Birthday
+    Nếu bạn muốn thêm chữ vào thì phải thay đổi css tương ứng cho nó -->
+        <div class="balloon">
+            <div><span>H</span></div>
+            <div><span>A</span></div>
+            <div><span>P</span></div>
+            <div><span>P</span></div>
+            <div><span>Y</span></div>
+            <div><span>B</span></div>
+            <div><span>I</span></div>
+            <div><span>R</span></div>
+            <div><span>T</span></div>
+            <div><span>H</span></div>
+            <div><span>D</span></div>
+            <div><span>A</span></div>
+            <div><span>Y</span></div>
+        </div>
+        <div class="avatar">
+            <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+            <img src="./covui.jpg" alt="" class="avatar__img" align="middle" onclick="showMessage()" />
+            <h1 onclick="showMessage()" class="avatar__title">Vi Thị Vui</h1>
+
+        </div>
+        <div class="avatar2">
+            <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+            <img src="./cothoa.jpg" alt="" class="avatar__img2" align="middle" onclick="showMessage()" />
+            <h1 onclick="showMessage()" class="avatar__title2">Trần Thị Bích Thoa</h1>
+
+        </div>
+        <div class="avatar3">
+            <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+            <img src="./coha1.jpg" alt="" class="avatar__img3" align="middle" onclick="showMessage()" />
+            <h1 onclick="showMessage()" class="avatar__title3">Lê Thị Thanh Hà</h1>
+
+        </div>
+
+        <!-- 5. Phần nhạc -->
+        <audio id="player" autoplay loop>
+            <source src="./music.mp3" type="audio/mp3">
+        </audio>
+        <button class="btn-open">❤</button>
+        <div class="model hide">
+            <div class="model-inner">
+                <div class="model-header">
+                    <p>Lời Chúc</p>
+                </div>
+                <div class="model-body"></div>
+                <p> Em và cô gặp nhau như A gặp T, như G gặp X tạo thành phân tử ADN bền vững nhờ liên kết hidro. Những bài học cô dạy chúng em nhiều và đa dạng như các bộ ba axit amin vậy. Chúng em chúc cô Vui 20/11 xinh đẹp như vẻ đẹp của nhiễm sắc thể, tinh tế như cấu tạo ADN và ngày càng nhân lên nhờ phương pháp nuôi cấy mô tế bào. Chúc cô không gặp “đột biến” trên con đường sự nghiệp của mình và tìm ra được điều mới như tìm ra được “biến dị tổ hợp” có lợi.</p>
+                <div class="model-footer">
+                    <button>Close</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn-open2">❤</button>
+        <div class="model2 hide2">
+            <div class="model-inner2">
+                <div class="model-header2">
+                    <p>Lời Chúc</p>
+                </div>
+                <div class="model-body2"></div>
+                <p>Con ong yêu mật con cá yêu nước, những bông hoa làm đẹp cho đời. Nghệ thuật là vẻ đẹp tinh thần đem lại muôn vàn sức sống tươi đẹp. Chúng em chúc cô Hà luôn luôn vui vẻ như cách mà cô tạo ra nghệ thuật làm đẹp cho đời!</p>
+                <div class="model-footer2">
+                    <button>Close</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn-open3">❤</button>
+        <div class="model3 hide3">
+            <div class="model-inner3">
+                <div class="model-header3">
+                    <p>Lời Chúc</p>
+                </div>
+                <div class="model-body3"></div>
+                <p> Cuộc đời em rất vội vã với những lý lẽ bao quanh. Có lẽ nhờ có Newton tìm ra lực hấp dần mà em thấy lời cô dạy ngày càng hấp dẫn hơn. 20/11 chúc cô Thoa luôn luôn sống mãi như nam châm vĩnh cửu, tươi cười như từ trường và có một nhan sắc tồn tại với thời gian như định luật vạn vật hấp dẫn!</p>
+                <div class="model-footer3">
+                    <button>Close</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn-open4">🎂</button>
+        <div class="model4 hide4">
+            <div class="model-inner4">
+                <div class="model-header4">
+                    <p>Chúc Mừng Sinh Nhật</p>
+                </div>
+                <div class="model-body4"></div>
+                <p>Tin nhắn này không chứa chất béo, không cholesterol và các chất gây nghiện mà nó chỉ có nhiều đường mà thôi. Khi các cô đọc những dòng tin nhắn này thì chúng em chỉ muốn gửi đôi điều tới những người giáo viên xinh đẹp rằng chúng em yêu quý và kính trọng các cô rất nhiều. Chúc các cô sinh nhật thật vui vẻ, sức khỏe và luôn vui vẻ nhé!</p>
+                <div class="model-footer4">
+                    <button>Close</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn-open5">🎂</button>
+        <div class="model5 hide5">
+            <div class="model-inner5">
+                <div class="model-header5">
+                    <p>Chúc Mừng Sinh Nhật</p>
+                </div>
+                <div class="model-body5"></div>
+                <p>Tin nhắn này không chứa chất béo, không cholesterol và các chất gây nghiện mà nó chỉ có nhiều đường mà thôi. Khi các cô đọc những dòng tin nhắn này thì chúng em chỉ muốn gửi đôi điều tới những người giáo viên xinh đẹp rằng chúng em yêu quý và kính trọng các cô rất nhiều. Chúc các cô sinh nhật thật vui vẻ, sức khỏe và luôn vui vẻ nhé!</p>
+                <div class="model-footer5">
+                    <button>Close</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+</body>
+</html>
